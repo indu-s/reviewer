@@ -1,6 +1,7 @@
 # reviewer
 
 Get beautiful reveal.js presentations from your Markdown files.
+Forked From https://github.com/webpro/reveal-md.git
 
 ## Installation
 
@@ -131,6 +132,3 @@ You can define Reveal.js [options](https://github.com/hakimel/reveal.js#configur
 * `reviewer` always starts a local server and opens the default browser
 * From any presentation, navigate to the root (e.g. [http://localhost:1948](http://localhost:1948)) to get directory listing of (linked) Markdown files. Root folder is resolved from Markdown file (or directory) `reviewer` was started with.
 
-## License
-
-[MIT](http://webpro.mit-license.org)
