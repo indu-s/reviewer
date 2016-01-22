@@ -1,6 +1,6 @@
 # reviewer
 
-Get beautiful reveal.js presentations from your Markdown files.
+Get beautiful reviewer presentations from your Markdown files.
 Forked From https://github.com/webpro/reveal-md.git
 
 ## Installation
@@ -9,9 +9,9 @@ Forked From https://github.com/webpro/reveal-md.git
 npm install -g reviewer
 ```
 
-## Markdown in reveal.js
+## Markdown in reviewer
 
-The Markdown feature of reveal.js is awesome, and has an easy (and configurable) syntax to separate slides.
+The Markdown feature of reviewer is awesome, and has an easy (and configurable) syntax to separate slides.
 Use three dashes surrounded by two blank lines (`\n---\n`).
 Example:
 
@@ -34,12 +34,12 @@ The separator syntax can be overriden (e.g. I like to use three blank lines).
 
 ## Speaker Notes
 
-You can use the [speaker notes](https://github.com/hakimel/reveal.js#speaker-notes) feature by using a line starting with `Note:`.
+You can use the [speaker notes](https://github.com/hakimel/reviewer#speaker-notes) feature by using a line starting with `Note:`.
 
 
 ## Usage
 
-To open specific Markdown file as Reveal.js slideshow:
+To open specific Markdown file as reviewer slideshow:
 
 ``` bash
 reviewer slides.md
@@ -118,7 +118,7 @@ reviewer slides.md --print slides.pdf
 
 ## Options
 
-You can define Reveal.js [options](https://github.com/hakimel/reveal.js#configuration) in a `reveal.json` file that you should put in the root directory of the Markdown files. They'll be picked up automatically. Example:
+You can define reviewer [options](https://github.com/hakimel/reviewer#configuration) in a `revieweron` file that you should put in the root directory of the Markdown files. They'll be picked up automatically. Example:
 
 ``` json
 {
