@@ -13,6 +13,7 @@ var path = require('path'),
 var app = express();
 var staticDir = express.static;
 
+
 var serverBasePath = path.join(__dirname, '..');
 
 var opts = {
