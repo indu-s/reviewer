@@ -11,6 +11,7 @@ var path = require('path'),
     exec = require('child_process').exec;
 
 var app = express();
+    app.use('/static', express.static(__dirname + '/override'));
 var staticDir = express.static;
 
 
