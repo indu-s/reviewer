@@ -135,3 +135,17 @@ You can define reviewer [options](https://github.com/hakimel/reviewer#configurat
 ## Reference
 
 * Forked From [reveal-md] (https://github.com/webpro/reveal-md.git)
+
+## Development 
+Update package.json
+``` bash
+npm uninstall -g reviewer
+npm publish
+npm install -g reviewer
+```
+
+* Testing Locally
+npm pack
+npm install (tar-file)
+
+[Link](http://podefr.tumblr.com/post/30488475488/locally-test-your-npm-modules-without-publishing)
