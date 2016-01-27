@@ -11,14 +11,11 @@ var path = require('path'),
     exec = require('child_process').exec;
 
 var serverBasePath = path.join(__dirname, '..');
+var staticDir = express.static;
     console.log("Base Path " + serverBasePath);
 
 var app = express();
     app.use('/static', express.static(serverBasePath + '/override'));
-var staticDir = express.static;
-
-
-
 
 var opts = {
     printMode: false,
@@ -28,7 +25,7 @@ var opts = {
     revealBasePath: path.resolve(require.resolve('reveal.js'), '..', '..'),
     template: fs.readFileSync(path.join(serverBasePath, 'template', 'reveal.html')).toString(),
     templateListing: fs.readFileSync(path.join(serverBasePath, 'template', 'listing.html')).toString(),
-    theme: 'black',
+    theme: 'cisco-custom',
     highlightTheme: 'zenburn',
     separator: '^(\r\n?|\n)---(\r\n?|\n)$',
     verticalSeparator: '^(\r\n?|\n)----(\r\n?|\n)$',
