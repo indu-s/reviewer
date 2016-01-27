@@ -10,12 +10,15 @@ var path = require('path'),
     md = require('reveal.js/plugin/markdown/markdown'),
     exec = require('child_process').exec;
 
+var serverBasePath = path.join(__dirname, '..');
+    console.log("Base Path " + serverBasePath);
+
 var app = express();
-    app.use('/static', express.static(__dirname + '/override'));
+    app.use('/static', express.static(serverBasePath + '/override'));
 var staticDir = express.static;
 
 
-var serverBasePath = path.join(__dirname, '..');
+
 
 var opts = {
     printMode: false,
