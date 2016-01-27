@@ -4,25 +4,37 @@
         <meta charset="utf-8">
         <title>Reviewer</title>
         <link rel="stylesheet" href="/css/reveal.css">
-        <link rel="stylesheet" href="/static/cisco-custom.css" >
-
+        <link rel="stylesheet" href="/static/cisco-custom.css">
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="/lib/css/{{{highlightTheme}}}.css">
-
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
           document.write( '<link rel="stylesheet" href="/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
         </script>
+		<style>
+		body {
+			background: #ffffff;
+			color: #000000;
+		}
+		footer {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 1rem;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			color: #000000;
+		}
+		</style>
     </head>
-    <body>
-
+    <body class="markdown-body">
         <div class="reveal">
             <div class="slides">{{{slides}}}</div>
         </div>
-
         <script src="/lib/js/head.min.js"></script>
         <script src="/js/reveal.js"></script>
-
         <script>
             function extend() {
               var target = {};
@@ -36,7 +48,6 @@
               }
               return target;
             }
-
             // Optional libraries used to extend on reveal.js
             var deps = [
                 { src: '/lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -46,8 +57,6 @@
                 { src: '/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
                 { src: '/plugin/math/math.js', async: true }
             ];
-
-
             // default options to init reveal.js
             var defaultOptions = {
               controls: true,
@@ -57,13 +66,14 @@
               transition: 'default',
               dependencies: deps
             };
-
             // options from URL query string
             var queryOptions = Reveal.getQueryHash() || {};
-
             var options = {{{options}}};
             options = extend(defaultOptions, options, queryOptions);
             Reveal.initialize(options);
         </script>
     </body>
+	<footer>
+		@ 2015 cisco and/or its affiliates. All rights reserved. Cisco confidential 
+	</footer>
 </html>
