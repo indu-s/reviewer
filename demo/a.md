@@ -3,7 +3,7 @@ It's very easy to make some words **bold** and other words *italic* with Markdow
 
 ---
 
-## This is h2 Heading
+# This is h1 Heading
 Sometimes you want numbered lists:
 
 1. One
@@ -24,14 +24,14 @@ Alternatively,
 
 ---
 
-### This is h3 Heading
+# This is h1 Heading
 If you want to embed images, this is how you do it:
 
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ---
 
-#### This is h4 Heading
+# This is h1 Heading
 
 Sometimes it's useful to have different levels of headings to structure your documents. Start lines with a `#` to create headings. Multiple `##` in a row denote smaller heading sizes.
 
@@ -44,7 +44,7 @@ If you'd like to quote someone, use the > character before the line:
 
 ---
 
-##### This is h5 Heading
+# This is h1 Heading
 There are many different ways to style code with GitHub's markdown. If you have inline code blocks, wrap them in backticks: `var example = true`.  If you've got a longer block of code, you can indent with four spaces:
 
     if (isAwesome){
@@ -69,5 +69,5 @@ if (isAwesome){
 
 ---
 
-###### This is h6 Heading
+# This is h1 Heading
 The End.
