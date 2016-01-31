@@ -55,17 +55,20 @@
 
             // default options to init reveal.js
             var defaultOptions = {
-              controls: true,
-              progress: true,
-              history: true,
-              center: true,
-              transition: 'default',
-              dependencies: deps
+                controls: true,
+                progress: true,
+                history: true,
+                slideNumber: true,
+                keyboard: true,
+                overview: true,
+                center: true,
+                transition: 'fade',
+                touch: true,
+                dependencies: deps
             };
 
             // options from URL query string
             var queryOptions = Reveal.getQueryHash() || {};
-
             var options = {{{options}}};
             options = extend(defaultOptions, options, queryOptions);
             Reveal.initialize(options);
