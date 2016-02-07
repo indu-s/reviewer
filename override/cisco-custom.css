@@ -52,3 +52,30 @@ body {
 .reveal h4 {
     font-size: 0.7em; }
 
+.reveal ul ul {
+    list-style-type: circle;
+    font-size: 0.6em; }
+
+
+.reveal table th {
+    font-size: 0.5em;
+    border:1px solid #000000;
+    border-width:0px 1px 1px 0px;
+    text-align:center;
+    padding:7px;
+    color: #fff;
+    background: gray;
+}
+
+.reveal table td {
+    font-size: 0.4em;
+    border:1px solid #000000;
+    border-width:0px 1px 1px 0px;
+    text-align:left;
+    padding:7px;
+    border: 1px solid black;
+}
+
+.reveal table tr {
+    border: 1px solid black;
+}
