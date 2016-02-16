@@ -1,7 +1,7 @@
 # reviewer
 
 Get beautiful reviewer presentations from your Markdown files.
-
+Supports Emoji & Check Box - Hurray
 
 ## Installation
 
