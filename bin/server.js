@@ -8,6 +8,11 @@ var path = require('path'),
     Mustache = require('mustache'),
     glob = require('glob'),
     md = require('reveal.js/plugin/markdown/markdown'),
+    mdit = require('markdown-it')(),
+    emoji = require('markdown-it-emoji'),
+    toMarkdown = require('to-markdown'),
+    checkbox = require('markdown-it-checkbox'),
+
     exec = require('child_process').exec;
 
 var serverBasePath = path.join(__dirname, '..');
@@ -139,12 +144,20 @@ var renderMarkdownAsSlides = function(req, res) {
 var render = function(res, markdown) {
     var slides = md.slidify(markdown, opts);
 
-    res.send(Mustache.to_html(opts.template, {
+    /* Apply EmoJi Icons To Markdown*/
+    mdit.use(emoji);
+    mdit.use(checkbox);
+
+    var result = mdit.render(slides);
+    var emojiSlides = toMarkdown(result);
+
+    var html = Mustache.to_html(opts.template, {
         theme: opts.theme,
         highlightTheme: opts.highlightTheme,
-        slides: slides,
+        slides: emojiSlides,
         options: JSON.stringify(opts.revealOptions, null, 2)
-    }));
+    });
+    res.send(html);
 };
 
 var generateMarkdownListing = function(userBasePath) {

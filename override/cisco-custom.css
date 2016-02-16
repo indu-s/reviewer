@@ -79,3 +79,13 @@ body {
 .reveal table tr {
     border: 1px solid black;
 }
+
+.emoji{
+    width: 5%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.checkbox {
+
+}
